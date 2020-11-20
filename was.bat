@@ -2,7 +2,7 @@
 cls
 color a
 echo -----------------------------------
-echo I     Windows Admin Suite v1.2    I
+echo I     Windows Admin Suite v1.3    I
 echo I       Developed by 101sec       I
 echo I         WhiteHoodHacker         I
 echo I           myLemonLime           I
@@ -12,7 +12,7 @@ pause
 goto 1
 
 :1
-echo  [1] Choose which program to perform action:
+echo  [1] Choose which binary to modify:
 echo      (s) sethc.exe    *Recommended
 echo      (o) osk.exe      *Most secure
 echo      (u) utilman.exe  *Least secure
@@ -30,7 +30,7 @@ if %inputProgram%==utilman.exe goto utilman
 goto invalidInputProgram
 
 :2
-echo  [2] Choose which disk (containing Windows) to perform action:
+echo  [2] Choose which drive (containing Windows) to modify:
 echo      (Drives are listed below.)
 echo      (Enter drive letter to select.)
 wmic logicaldisk get caption,description,drivetype,volumename
@@ -92,7 +92,7 @@ goto 3
 
 :3
 echo.
-echo  [3] Choose configuration:
+echo  [3] Action to configure:
 echo      (a) Apply (copy cmd.exe to %selectedProgram%)
 echo      (r) Revert (change %selectedProgram% back to normal)
 echo.
